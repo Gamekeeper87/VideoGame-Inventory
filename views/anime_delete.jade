@@ -1,0 +1,13 @@
+extends layout 
+
+block content
+    h1(style='color: red') #{title}: #{anime.name}
+    h2#delete-anime-genre Genre: #{anime.genre}
+
+    p(style='text-align: center; margin-top: 60px;') Do your really want to delete this Anime?
+
+    form(method='POST' action='')
+        .form-group 
+            input#animeid.form-control(type='hidden', name='animeid', required='true', value='anime._id')
+        
+        button#delete-perma-btn(type='submit' style='background-color: red') Delete

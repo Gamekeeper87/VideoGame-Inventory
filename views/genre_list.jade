@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= title 
+
+    ul 
+        each genre in genre_list 
+            div.content-container
+                h1= genre.name 
+                img(src=genre.poster)
+
+    script(src='/javascripts/index.js')
+

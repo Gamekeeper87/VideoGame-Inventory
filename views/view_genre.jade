@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    
+    ul#anime-main 
+        each anime in anime_list 
+            div.anime-container
+                #poster-name 
+                    h1= anime.name 
+                    img(src=anime.poster)
+                #description
+                    p= anime.description 
+                    h3= anime.genre
+                    #update-delete-btns 
+                        p 
+                            a(href='/update' + anime.url).update Update
+                        p 
+                            a(href='/delete' + anime.url).delete Delete
